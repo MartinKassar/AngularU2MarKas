@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,7 +19,6 @@ export class AuthServiceService {
   }
 
   logOut(loggedUser):void {
-    loggedUser = false
     localStorage.clear();
 
   }

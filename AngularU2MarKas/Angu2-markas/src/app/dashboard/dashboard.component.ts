@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { AuthServiceService } from '../auth-service.service';
 
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -11,8 +12,12 @@ export class DashboardComponent implements OnInit {
   
   // My array of users containing only strings
   userList: string[] = []
+  loggedUser: string
+
   
-  constructor(private authService: AuthServiceService) { }
+  constructor(private authService: AuthServiceService) {
+    this.loggedUser = this.authService.checkIfLoggedIn()
+   }
 
   ngOnInit() {
     
@@ -29,6 +34,7 @@ export class DashboardComponent implements OnInit {
   removeUser():void {
     this.userList.pop()
   }
+  
 
 }
 

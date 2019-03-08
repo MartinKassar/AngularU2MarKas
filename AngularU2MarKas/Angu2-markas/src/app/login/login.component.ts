@@ -9,13 +9,13 @@ import { AuthServiceService } from '../auth-service.service';
 export class LoginComponent implements OnInit {
 
   public user: string //Input value
-  public loggedUser: string //Boolean to check status
+  public loggedUser: string //String to check if localStorage is empty or not
   
   constructor(private authService: AuthServiceService) {
-    
+    this.loggedUser = this.authService.checkIfLoggedIn()
   }
   
-  // Function on button add click
+  // Function on button login, loggeduser sets to "true" since localstorage adds to loggeduser
   onClickLogin():void {
     this.authService.login(this.user)
     this.loggedUser = this.authService.checkIfLoggedIn()

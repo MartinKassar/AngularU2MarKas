@@ -6,4 +6,4 @@
     <app-editusers (addUser)="addUser($event)" (removeUser)="removeUser($event)" [usersList]="userList"></app-editusers>
 </div>
 
-<div ngIf="loggedUser == false"><h1>Log in to view dashboard</h1></div>
+<div *ngIf="!loggedUser"><h1>Log in to view dashboard</h1></div>
