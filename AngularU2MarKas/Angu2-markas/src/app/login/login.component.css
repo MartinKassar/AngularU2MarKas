@@ -51,12 +51,12 @@ input {
 
 :host {
     text-align: center;
-    display: block;
-
+    display: flex;
+    justify-content: center;
+    margin: 100px auto 0;
 }
 
 .form {
     background: #ebeef1;
     width: 200px;
-    text-align: center;
 }

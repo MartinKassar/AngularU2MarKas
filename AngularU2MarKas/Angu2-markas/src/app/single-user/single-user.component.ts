@@ -12,6 +12,7 @@ export class SingleUserComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    //This captures the user that got clicked on and sets it to username
     this.route.params.subscribe(params => {
       this.username = params.id;
     })

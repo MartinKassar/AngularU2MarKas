@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SingleUserComponent} from './single-user/single-user.component'
 
-
+// My routes
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
